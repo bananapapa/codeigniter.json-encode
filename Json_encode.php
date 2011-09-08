@@ -1,18 +1,27 @@
 <?php if ( ! defined('BASEPATH') ) exit('No direct script access allowed');
 
+/***********************************************
+A Codeigniter library to encode data into the 
+JSON data format for PHP versions lower than 5.2 
+
+@current version 0.1
+@license MIT
+***********************************************/
+
 class Json_encode {
 
 	/***********************************************
 	Method: encode_array()
 		
-	This method enocodes a 1D array of scalars and returns 
-	a JSON encoded string.
+	This method enocodes a 1D array of scalars and 
+	returns a JSON encoded string.
 
 	@access public
 	@param (array) $array
 	@post void
 	@return (string) The encoded array
 	@author Nick Pyett
+	@since 0.1
 	***********************************************/
 	public function encode_array($array = array())
 	{
@@ -38,14 +47,15 @@ class Json_encode {
 	/***********************************************
 	Method: _encode_scalar()
 		
-	This method encodes a scalar. It will return NULL
-	for another other data types passed to it.
+	This method encodes a scalar. It will return 
+	NULL for another other data types passed to it.
 
 	@access private
 	@param (string/float/other scalar) $scalar
 	@post void
 	@return (string/float/other scalar) $scalar
 	@author Nick Pyett
+	@since 0.1
 	***********************************************/
 	public function _encode_scalar($scalar = '')
 	{
@@ -65,7 +75,6 @@ class Json_encode {
 		else return $scalar;		
 	}
 
-
 }
 
-// END OF FILE ./APPLICAITON/LIBRARIES/JSON.PHP
+// END OF FILE ./APPLICAITON/LIBRARIES/JSON_ENCODE.PHP
